@@ -5,13 +5,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+// EMPDB
 @Entity
 public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long syskey;
-	private Long employeeId;
+	private Long employeeID;
 	private String employeeName;
 	private String username;
 	private String password;
@@ -26,11 +27,11 @@ public class Employee {
 		super();
 	}
 
-	public Employee(Long syskey, Long employeeId, String employeeName, String username, String password, String gender,
+	public Employee(Long syskey, Long employeeID, String employeeName, String username, String password, String gender,
 			String phoneNo, String email, String address, String position, Long salary) {
 		super();
 		this.syskey = syskey;
-		this.employeeId = employeeId;
+		this.employeeID = employeeID;
 		this.employeeName = employeeName;
 		this.username = username;
 		this.password = password;
@@ -48,14 +49,14 @@ public class Employee {
 	public void setSyskey(Long syskey) {
 		this.syskey = syskey;
 	}
-	public Long getEmployeeId() {
-		return employeeId;
+	public Long getEmployeeID() {
+		return employeeID;
 	}
-	public void setEmployeeId(Long employeeId) {
-		this.employeeId = employeeId;
+	public void setEmployeeID(Long employeeID) {
+		this.employeeID = employeeID;
 	}
 	public String getEmployeeName() {
-		return employeeName;
+		return employeeName; 
 	}
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
